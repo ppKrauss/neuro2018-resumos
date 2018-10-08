@@ -87,3 +87,26 @@ SELECT file_put_contents(
       )
     )
 FROM neuro.vw_relxml1;
+
+-- Indice da Capa:
+SELECT file_put_contents(
+  '/tmp/neuro2018_capa.htm',
+  xmlconcat(
+    neuro.sumario('Oral'),
+    neuro.sumario('Pôster'),
+    (select xmlelement(name p, 'Total geral '|| (SELECT count(*) FROM neuro.reltrabalhos) || ' resumos' ))
+    )::text
+  );
+
+-- Indice dos autores:
+SELECT file_put_contents(
+  '/tmp/neuro2018_idx.htm',
+  replace(xmlagg( xmlelement(name p, autor ||'...'|| array_to_string(itens,', ')) )::text, '<p', E'\n<p')
+  )
+FROM (
+  SELECT
+    name_for_index(nome_full) autor, array_agg(r.pub_id) itens
+  FROM neuro.relTrabalhos r, LATERAL jsonb_to_recordset( (neuro.metadata_bycod(r.codigo))->'contribs' ) t(nome_full text)
+  GROUP BY 1
+  ORDER BY 1
+) t;

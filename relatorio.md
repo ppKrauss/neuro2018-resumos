@@ -1,4 +1,3 @@
- 
 # Relatório de contagens e cosistência
 
 ## Avaliação individual dos arquivos
@@ -6,20 +5,15 @@ Cada arquivo quanto ao total de registros, distribuição por temas e normaliza�
 
 ### ApresOral
 Total  288 registros, porém 48 únicos, demais repetidos com mesmo código e a maioria com mesmo título.
-<!-- select  count(*)  n, count(distinct codigo) n_unicos from neuro.ApresOral; -->
+
 ### ApresPoster
-<!-- select  count(*)  n, count(distinct codigo) n_unicos from neuro.apresposter;
-  n   | n_unicos
-------+----------
- 9348 |     1558
--->
 Total  9348 registros, porém 1558 únicos, demais repetidos com mesmo código e a maioria com mesmo título.
 
 ### RelTrabalhos
 
 Total  1606 registros, consistente com o total de itens distintos de cada tipo de apresentação:
 
-* Itens não-repetidos de ApresOral: 48<!-- select  count(distinct codigo) from neuro.reltrabalhos where codigo IN (select codigo from neuro.apresoral); --    48 -->
+* Itens não-repetidos de ApresOral: 48
 * Itens não-repetidos de ApresPoster: 1548
 
 Distribuição por tema:
@@ -50,6 +44,13 @@ Sono                                                                            
 Transtornos do Movimento                                                              | Oral 7, Poster 154
 Traumatismo cranioencefálico                                                          | Poster 23
 <!--
+scripts dos resultados acima:
+
+select  count(*)  n, count(distinct codigo) n_unicos from neuro.ApresOral;
+select  count(*)  n, count(distinct codigo) n_unicos from neuro.apresposter;
+
+SELECT count(distinct codigo) from neuro.reltrabalhos where codigo IN (select codigo from neuro.apresoral); 48
+
 SELECT temario, array_to_string(array_agg(tipo||' '||n),', ') n
 FROM (
   SELECT rr.temario, CASE
@@ -68,4 +69,3 @@ FROM (
 ## Etapa final, layout HTML
 
 ....
-
