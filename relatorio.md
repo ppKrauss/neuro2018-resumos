@@ -63,8 +63,21 @@ FROM (
 ## Avaliação da primeira etapa, XML
 
 * Problemas com UTF8 no resumo não serão corrigidos, vieram dos originais. Pode-se tentar filtrar simbolos estranhos substituindo por espaço.
+
 * Autores duplicados sendo aceitos, mas duplicados para multiplas afiliações não.
 
+* Alguns nomes de autores foram trocados pelas afiliações, ver tabela abaixo
+
+codigo | aff_id |nome_suspeito       
+--------|--------|---------------
+73087 |      7 | Department of Medical Sciences, Institute of Biomedicine-iBiMED, University of Aveiro, Aveiro, Portugal                                   |
+73156 |      4 | Neurodiagnostic Brasil\u0096Diagnósticos em Neuropatologia                                                                                |
+73244 |      3 | Hospital de Clínicas da Universidade Federal do Paraná                                                                                    |
+73463 |      5 | Internal Medicine Department, Postgraduate Program in Medicine: Medical Sciences                                                          |
+74264 |      3 | Hospital de Clínicas da Universidade Federal do Paraná                                                                                    |
+74387 |      6 | Molecular Medicine Branch, Eunice Kennedy Shriver National Institute of Child Health and Human Development, National Institutes of Health |
+74537 |      6 | Center of Neurology and Neurosurgery Associates (NeuroCENNA). BP u0096 A Beneficência Portuguesa                                         |
+75213 |      4 | The Brazilian Institute of Neuroscience and Neurotechnology u0096 BRAINN, Campinas, SP, Brazil                                           |
 
 ## Etapa final, layout HTML
 

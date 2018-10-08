@@ -106,7 +106,18 @@ SELECT file_put_contents(
 FROM (
   SELECT
     name_for_index(nome_full) autor, array_agg(r.pub_id) itens
-  FROM neuro.relTrabalhos r, LATERAL jsonb_to_recordset( (neuro.metadata_bycod(r.codigo))->'contribs' ) t(nome_full text)
+  FROM neuro.relTrabalhos r,
+       LATERAL jsonb_to_recordset( (neuro.metadata_bycod(r.codigo))->'contribs' ) t(nome_full text)
   GROUP BY 1
   ORDER BY 1
 ) t;
+
+SELECT file_put_contents(
+      '/tmp/neuro2018_body.htm',
+      replace(
+         xmlelement( name div,  xmlagg(resumo_full) )::text,
+         '<p',
+         E'\n<p'
+      )
+    )
+FROM neuro.vw_corpo;
