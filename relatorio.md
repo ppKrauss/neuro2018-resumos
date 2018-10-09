@@ -112,4 +112,33 @@ codigo | aff_id |nome_suspeito
 
 ## Etapa final, layout HTML
 
+A intenção do autor na estruturação do resumo foi determinada estatisticamente:
+
+Precisa bold?         |  n  | Precisa bold?  | n
+--------------------------|-----|------------|------
+Introduction:            | 378 |ABSTRACT                 |   4
+CASE                     | 156|ABSTRACT:                |   4
+presentation:            | 124|BACKGROUND               |   4
+INTRODUCTION:            | 117|groups:                  |   4
+report:                  |  87|Methods:                 |   4
+Presentation:            |  73|history:                 |   3
+Report:                  |  73|VI                       |   3
+Background:              |  53|Abstract:                |   2
+case:                    |  22|caso:                    |   2
+Case:                    |  20|Discussion:              |   2
+BACKGROUND:              |  19|III                      |   2
+Objective:               |  16|INTRODU                  |   2
+INTRODUCTION             |  14|INTRODUÇÃO:              |   2
+Introdução:              |   7|Introduction/Background: |   2
+PRESENTATION:            |   7|Introduction/Objectives: |   2
+1:                       |   5|OBJECTIVE:               |   2
+SMA                      |   5|...|...
+
+Consulta SQL:
+```sql
+select unnest(regexp_matches(resumo,'([^\s:,;\.]+:|[A-Z][A-Z]+)')) x, count(*) n 
+from neuro.reltrabalhos group by 1 order by 2 desc, 1;
+```
+Como medida paleativa uma expressão regular baseada nas palavras mais frequentes e pontuação foi gerada, e `<span class="destaque">`  incluso para o operador do layout dar o devido tratamento.
+
 ....
