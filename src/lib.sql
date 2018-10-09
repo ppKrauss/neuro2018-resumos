@@ -103,6 +103,20 @@ CREATE FUNCTION neuro.metadata_bycod(p_codigo int) RETURNS jsonb AS $f$
 $f$ LANGUAGE SQL IMMUTABLE;
 
 ALTER TABLE neuro.reltrabalhos ADD COLUMN pub_id text;
+ALTER TABLE neuro.reltrabalhos ADD CONSTRAINT neurorel1u UNIQUE (codigo);
+ALTER TABLE neuro.reltrabalhos ADD CONSTRAINT neurorel2u UNIQUE (pub_id);
+
+UPDATE neuro.reltrabalhos
+SET resumo = replace(replace(replace(resumo,'>','&gt;'),'<','&lt;'),'&','&amp;')
+WHERE resumo ~ '[><&]' AND not(resumo ~ '(&gt;|&lt;|&amp;)')
+;
+
+UPDATE neuro.reltrabalhos -- gambiarra para destaque parcial
+SET resumo = regexp_replace(resumo,'(Case Presentation|Apresentação de caso|Case Report|Introduction|Introdução|Presentation|Report|Caso|Relato de caso|Relatório|Case|BACKGROUND|Objective|Discussion|Methods|Métodos|Discussão|Apresentação):','<span class="destaque">\1</span>:', 'g')
+WHERE not(resumo ~ '<span class="destaque">')
+;
+ALTER TABLE neuro.reltrabalhos ALTER COLUMN resumo TYPE XML USING resumo::xml;
+
 UPDATE neuro.reltrabalhos
 SET pub_id = t2.pub_prefix||chr(160)|| CASE
       WHEN num_painel IS NULL THEN  lpad(rk::text, 2, '0')
@@ -193,7 +207,7 @@ $f$ LANGUAGE SQL IMMUTABLE;
 
 CREATE VIEW neuro.vw_contribs AS
   SELECT codigo, array_agg(nome||'<sup>'||aff_id||'</sup>') name_list,
-         array_distinct_sort(array_agg(replace(aff,'&','&amp;'))) aff_list
+         array_distinct_sort(array_agg(replace(InitCap(aff),'&','&amp;'))) aff_list
   FROM (
     SELECT DISTINCT codigo, pub_id, aff_id,
       name_for_resumo(nome_full, nome_abbrev) nome,
