@@ -1,12 +1,16 @@
+
 <h1><a name="oral">Oral</a></h1>
+
 <h2><a name="8862a">Cefaleia</a></h2>
 <p class="abstractid-p"><a name="TL46">TL 46</a></p>
 <p class="abstractid-p">EFFECTS OF ANTIEPILEPTIC DRUGS ON SPREADING DEPRESSION IN THE CHICK RETINA: IMPLICATIONS FOR MIGRAINE PROPHYLAXIS</p>
+
 <h2><a name="c9d46">Distúrbio Vestibulares e do Equilíbrio</a></h2>
 <p class="abstractid-p"><a name="TL22">TL 22</a></p>
 <p class="abstractid-p">STATIC AND DYNAMIC SUBJECTIVE VERTICAL VISUAL IN STROKE PATIENTS: A NEW METHOD USING VIRTUAL REALITY</p>
 <p class="abstractid-p"><a name="TL34">TL 34</a></p>
 <p class="abstractid-p">POSTUROGRAPHY AND MINIBESTEST IN PATIENTS WITH VESTIBULAR DISORDERS AND CEREBELLAR ATAXIA</p>
+
 <h2><a name="53bf0">Doença Cerebrovascular, Neurologia Intervencionista e Terapia Intensiva em Neurologia</a></h2>
 <p class="abstractid-p"><a name="TL02">TL 02</a></p>
 <p class="abstractid-p">LARGE-SCALE BRAIN NETWORKS CONNECTIVITY AND NEUROCOGNITIVE PERFORMANCE IMPAIRMENT IN STROKE-FREE PATIENTS WITH ATRIAL FIBRILLATION</p>
@@ -22,6 +26,7 @@
 <p class="abstractid-p">WAKE-UP STROKE: EVALUATION OF STROKE SUBTYPES AND RISK FACTORS</p>
 <p class="abstractid-p"><a name="TL41">TL 41</a></p>
 <p class="abstractid-p">VOXEL BASED MORPHOMETRY IN POST-STROKE EPILEPSY REVEALS LIMBIC ATROPHY</p>
+
 <h2><a name="cb644">Doenças do Neurônio Motor  Esclerose Lateral Amiotrófica</a></h2>
 <p class="abstractid-p"><a name="TL13">TL 13</a></p>
 <p class="abstractid-p">LARYNGEAL ELECTROMYOGRAPHY IN PATIENTS WITH AMIOTROPHIC LATERAL SCLEROSIS (ALS): PRELIMINARY RESULTS</p>
@@ -29,6 +34,7 @@
 <p class="abstractid-p">CHARACTERIZATION OF THE NIGROSTRIATAL SYSTEM IN A SAMPLE OF PATIENTS WITH AMYOTROPHIC LATERAL SCLEROSIS</p>
 <p class="abstractid-p"><a name="TL44">TL 44</a></p>
 <p class="abstractid-p">DISTINCT PATTERNS OF CEREBELLAR DAMAGE IN SPORADIC AND C9ORF72-RELATED ALS</p>
+
 <h2><a name="a2a43">Doenças Neuromusculares</a></h2>
 <p class="abstractid-p"><a name="TL07">TL 07</a></p>
 <p class="abstractid-p">EXPANDING THE PHENOTYPE OF DMD WOMEN CARRIERS: CENTRAL NERVOUS SYSTEM IS AFFECTED</p>
@@ -38,6 +44,7 @@
 <p class="abstractid-p">CLINICAL, GENETIC AND NEURORRADIOLOGICAL PROFILE OF PATIENTS WITH PURE AND COMPLICATED PEDIATRIC-ONSET HEREDITARY SPASTIC PARAPLEGIA</p>
 <p class="abstractid-p"><a name="TL33">TL 33</a></p>
 <p class="abstractid-p">PROPOSING OF A LESS COSTLY STRATEGY FOR MOLECULAR DIAGNOSIS OF CONGENITAL MYASTHENIC SYNDROME IN BRAZIL.</p>
+
 <h2><a name="92927">Epilepsia</a></h2>
 <p class="abstractid-p"><a name="TL24">TL 24</a></p>
 <p class="abstractid-p">BDNF SERUM LEVELS RELATED TO PHARMACO-RESISTANCE IN TEMPORAL LOBE EPILEPSY</p>
@@ -45,12 +52,15 @@
 <p class="abstractid-p">EVALUATION OF INDIVIDUAL PATTERNS OF FUNCTIONAL AND STRUCTURAL NEURAL NETWORKS IN PATIENTS WITH FOCAL PHARMACORESISTANT EPILEPSY</p>
 <p class="abstractid-p"><a name="TL48">TL 48</a></p>
 <p class="abstractid-p">ASSOCIATION OF HIPPOCAMPAL CA3 TRANSCRIPTIONAL MODULES WITH MEMORY AND LANGUAGE IMPAIRMENT IN MESIAL TEMPORAL LOBE EPILEPSY</p>
+
 <h2><a name="323e7">Líquido cefalorraquiano</a></h2>
 <p class="abstractid-p"><a name="TL20">TL 20</a></p>
 <p class="abstractid-p">IMPORTANCE OF DENGUE, ZIKA AND CHIKUNGUNYA VIRUS RESEARCH IN CEREBROSPINAL FLUID AS CAUSE OF ACUTE NEUROLOGIC MANIFESTATION IN ENDEMIC AREAS</p>
+
 <h2><a name="b0e2c">Neurofisiologia Clínica</a></h2>
 <p class="abstractid-p"><a name="TL12">TL 12</a></p>
 <p class="abstractid-p">GABAA DECREASE IN THE MOTOR CORTEX AS A MECHANISM FOR RESTLESS LEGS SYNDROME</p>
+
 <h2><a name="cdc5d">Neurogenética</a></h2>
 <p class="abstractid-p"><a name="TL11">TL 11</a></p>
 <p class="abstractid-p">A NOVEL COMPLEX NEUROLOGICAL PHENOTYPE DUE TO A HOMOZYGOUS MUTATION IN FDX2</p>
@@ -60,12 +70,15 @@
 <p class="abstractid-p">CEREBELLAR INVOLVEMENT IN HEREDITARY SPASTIC PARAPLEGIAS</p>
 <p class="abstractid-p"><a name="TL37">TL 37</a></p>
 <p class="abstractid-p">IDENTIFYING CIRCULATING BIOMARKERS IN PATIENTS WITH SYMPTOMATIC AND ASYMPTOMATIC CAROTID ARTERY STENOSIS: A PRELIMINARY REPORT</p>
+
 <h2><a name="02df2">Neuroimunologia</a></h2>
 <p class="abstractid-p"><a name="TL26">TL 26</a></p>
 <p class="abstractid-p">LOWER FREQUENCY OF ANTIBODIES TO MOG IN PATIENTS FROM RIO DE JANEIRO WITH NEUROMYELITIS SPECTRUM DISORDERS: AN ETHNIC INFLUENCE?</p>
+
 <h2><a name="3284b">Neuroinfecção</a></h2>
 <p class="abstractid-p"><a name="TL31">TL 31</a></p>
 <p class="abstractid-p">NEUROLOGICAL AND HISTOPATHOLOGICAL CLINICAL ASPECTS OF PATIENTS WITH LEPROSY IN FORTALEZA: STUDY OF 400 CASES.</p>
+
 <h2><a name="e130a">Neurologia Cognitiva E Do Envelhecimento</a></h2>
 <p class="abstractid-p"><a name="TL03">TL 03</a></p>
 <p class="abstractid-p">NEUROPSYCHIATRIC SYMPTOMS RELATED TO NEUROPATHOLOGIC VS. CLINICAL DIAGNOSIS OF DEMENTIA</p>
@@ -77,9 +90,11 @@
 <p class="abstractid-p">CORRELATION BETWEEN CLINICAL DIAGNOSIS AND FDG-PET PATTERN IN 111 PATIENTS WITH MILD COGNITIVE IMPAIRMENT, SUBJECTIVE COGNITIVE DECLINE AND CONTROLS: ANALYSIS FROM THE BRAZILIAN AGING AND MEMORY STUDY (BRAMS)</p>
 <p class="abstractid-p"><a name="TL47">TL 47</a></p>
 <p class="abstractid-p">DIFFERENCES IN DEFAULT MODE NETWORK CONNECTIVITY IN MCI WITH AND WITHOUT AMYLOIDOSIS: A PRELIMINARY STUDY</p>
+
 <h2><a name="de5f6">Neurologia Infantil</a></h2>
 <p class="abstractid-p"><a name="TL10">TL 10</a></p>
 <p class="abstractid-p">OROFACIAL MYOFUNCTIONAL DISORDER IN INFANTS WITH ZIKA-ASSOCIATED MICROCEPHALY</p>
+
 <h2><a name="6c704">Neuropatias Periféricas</a></h2>
 <p class="abstractid-p"><a name="TL23">TL 23</a></p>
 <p class="abstractid-p">PRIMARY NEURAL LEPROSY: CLINICAL, SEROLOGICAL, MOLECULAR, AND NEUROPHYSIOLOGICAL ASPECTS.</p>
@@ -87,17 +102,21 @@
 <p class="abstractid-p">EPSTEINBARR VIRUS INFECTION IN PATIENTS WITH GUILLAIN-BARRÉ SYNDROME: A PROSPECTIVE COHORT STUDY IN NORTHEAST BRAZIL</p>
 <p class="abstractid-p"><a name="TL45">TL 45</a></p>
 <p class="abstractid-p">CLINICAL AND NEUROPHYSIOLOGICAL PROFILE OF ANTI-FGFR3-RELATED NEUROPATHY.</p>
+
 <h2><a name="a0c65">Neurorreabilitação</a></h2>
 <p class="abstractid-p"><a name="TL01">TL 01</a></p>
 <p class="abstractid-p">NEUROPROTECTIVE AND REPAIRING PROPERTIES OF THE PHOSPHODIESTERASE INHIBITOR PENTOXIFYLLINE IN THE RAT CENTRAL NERVOUS SYSTEM AFTER INJURY</p>
 <p class="abstractid-p"><a name="TL16">TL 16</a></p>
 <p class="abstractid-p">VIRTUAL REALITY REHABILITATION IN ADULTS WITH SPINOCEREBELLAR ATAXIA</p>
+
 <h2><a name="730b3">Neurossonologia</a></h2>
 <p class="abstractid-p"><a name="TL04">TL 04</a></p>
 <p class="abstractid-p">INFLUENCE OF RISK OF OBSTRUCTIVE SLEEP APNEA ON CEREBRAL VASOREACTIVITY IN PATIENTS WITH STROKE</p>
+
 <h2><a name="98971">Sono</a></h2>
 <p class="abstractid-p"><a name="TL17">TL 17</a></p>
 <p class="abstractid-p">WHITE-MATTER PATHWAYS IN PRIMARY RESTLESS LEGS SYNDROME/ WILLIS-EKBOM DISEASE ASSESSED BY PROBABILISTIC TRACTOGRAPHY</p>
+
 <h2><a name="52c6a">Transtornos do Movimento</a></h2>
 <p class="abstractid-p"><a name="TL05">TL 05</a></p>
 <p class="abstractid-p">PLASMATIC AND CEREBROSPINAL FLUID ENDOCANNABINOIDS LEVELS IN PARKINSONS DISEASE</p>
@@ -113,7 +132,11 @@
 <p class="abstractid-p">ELECTROENCEPHALOGRAPHIC STUDY OF SEIZURES INDUCED BY THIOCOLCHICOSIDE</p>
 <p class="abstractid-p"><a name="TL32">TL 32</a></p>
 <p class="abstractid-p">FEASIBILITY OF 3T MRI NIGROSSOMAL MORPHOLOGIC CHANGES TO DIFFERENTIATE PARKINSON DISEASE FROM ESSENTIAL TREMOR AND CONTROLS  PRELIMINARY DATA</p>
+
+
+
 <h1><a name="poster">Pôster</a></h1>
+
 <h2><a name="8862a">Cefaleia</a></h2>
 <p class="abstractid-p"><a name="PO0391">PO 0391</a></p>
 <p class="abstractid-p">IMPORTANCE OF RECOGNIZING POST-TRAUMATIC HEADACHES</p>
@@ -243,6 +266,7 @@
 <p class="abstractid-p">FREQUENCY OF HEADACHE TYPES AT A SPECIALIST CLINIC FROM A UNIVERSITY-BASED HOSPITAL IN SALVADOR, BAHIA</p>
 <p class="abstractid-p"><a name="PO1191">PO 1191</a></p>
 <p class="abstractid-p">ASSOCIATION OF ZIKA-VIRUS INFECTION AND TEMPORAL ARTERITIS: A CASE REPORT</p>
+
 <h2><a name="c9d46">Distúrbio Vestibulares e do Equilíbrio</a></h2>
 <p class="abstractid-p"><a name="PO0001">PO 0001</a></p>
 <p class="abstractid-p">BENIGN PAROXYSMAL POSITIONAL VERTIGO AFTER CRANIOENCEPHALIC TRAUMA: A CASE REPORT</p>
@@ -272,6 +296,7 @@
 <p class="abstractid-p">METHYLMERCURY INTOXICATION AND ALTERATION IN CEREBELLAR ELECTROPHYSIOLOGICAL PARAMETERS</p>
 <p class="abstractid-p"><a name="PO0014">PO 0014</a></p>
 <p class="abstractid-p">CYTARABINE INDUCED ACUTE PANCEREBELLAR SYNDROME DURING TREATMENT FOR DIFFUSE LARGE B-CELL LYMPHOMA: A CASE REPORT</p>
+
 <h2><a name="53bf0">Doença Cerebrovascular, Neurologia Intervencionista e Terapia Intensiva em Neurologia</a></h2>
 <p class="abstractid-p"><a name="PO0015">PO 0015</a></p>
 <p class="abstractid-p">CAVERNOUS HEMANGIOMA, A RARE ENTITY: INJURY ASSESMENT IN CAVERNOUS SINUS AND FOLLOW-UP ON ASYMPTOMATIC PATIENT BY NEUROIMAGING</p>
@@ -757,6 +782,7 @@
 <p class="abstractid-p">PREVALENCE OF BURNOUT SYNDROME IN NEUROLOGISTS OF PARANA: DO STROKE-NEUROLOGISTS DIFFER FROM NON-STROKE NEUROLOGISTS?</p>
 <p class="abstractid-p"><a name="PO1252">PO 1252</a></p>
 <p class="abstractid-p">QUALITY OF LIFE AFTER FIRST-EVER ISCHEMIC STROKE</p>
+
 <h2><a name="cb644">Doenças do Neurônio Motor  Esclerose Lateral Amiotrófica</a></h2>
 <p class="abstractid-p"><a name="PO0074">PO 0074</a></p>
 <p class="abstractid-p">EVALUATION OF OROFACIAL MUSCULATURE FATIGUE AS CLINICAL MARKER BULBAR IN PATIENTS WITH MOTOR NEURON DISEASE</p>
@@ -824,6 +850,7 @@
 <p class="abstractid-p">MOTOR NEURON DISEASE AS A PARANEOPLASTIC SYNDROME</p>
 <p class="abstractid-p"><a name="PO0491">PO 0491</a></p>
 <p class="abstractid-p">CLINICAL, EPIDEMIOLOGICAL, NEURORRADIOLOGICAL AND GENETIC CHARACTERIZATION OF PATIENTS WITH FOSMN SYNDROME</p>
+
 <h2><a name="a2a43">Doenças Neuromusculares</a></h2>
 <p class="abstractid-p"><a name="PO0090">PO 0090</a></p>
 <p class="abstractid-p">CONSEQUÊNCIAS SOCIAIS E QUALIDADE DE VIDA DE PACIENTES COM MIASTENIA GRAVE</p>
@@ -1045,6 +1072,7 @@
 <p class="abstractid-p">NEUROIMAGING FINDINGS IN FAMILIAL SPASTIC PARAPARESIS (PEF) - CASE REPORT.</p>
 <p class="abstractid-p"><a name="PO1282">PO 1282</a></p>
 <p class="abstractid-p">ASYMMETRIC PHARYNGEAL-CERVICAL-BRACHIAL: A RARE FORM OF GUILLAIN-BARRE SYNDROME</p>
+
 <h2><a name="850f3">Dor</a></h2>
 <p class="abstractid-p"><a name="PO0522">PO 0522</a></p>
 <p class="abstractid-p">POLYMORPHISM ANALYSIS OF THE COMT G/A GENE IN WOMEN WITH AND WITHOUT FIBROMYALGIA.</p>
@@ -1052,6 +1080,7 @@
 <p class="abstractid-p">EVALUATION OF THE QUALITY OF LIFE AND OF THE SENSE OF GUILT IN PATIENTS WITH CHRONIC PAIN AND CHRONIC TINNITUS: A CONTROLLED STUDY</p>
 <p class="abstractid-p"><a name="PO0524">PO 0524</a></p>
 <p class="abstractid-p">THE MUSIC ORCHESTRA ON PAIN: A META-ANALYTICAL STUDY</p>
+
 <h2><a name="92927">Epilepsia</a></h2>
 <p class="abstractid-p"><a name="PO0110">PO 0110</a></p>
 <p class="abstractid-p">WEIGHT LOSS: UNUSUAL ADVERSE SIDE EFFECT OF VNS, CASE REPORT</p>
@@ -1197,6 +1226,7 @@
 <p class="abstractid-p">NEUROINFLAMATION IN THE PERPETUATION OF TEMPORAL LOBE EPILEPSY ASSOCIATED WITH HYPOCAMPAL SCLEROSIS (TLE-HS)</p>
 <p class="abstractid-p"><a name="PO905-">PO 905-</a></p>
 <p class="abstractid-p">DOOSE SYNDROME IN A MALE PRESCHOOLER</p>
+
 <h2><a name="cb8f9">História da neurologia</a></h2>
 <p class="abstractid-p"><a name="PO0906">PO 0906</a></p>
 <p class="abstractid-p">A BRIEF HISTORY OF REFLEX HAMMER</p>
@@ -1236,6 +1266,7 @@
 <p class="abstractid-p">A BRIEF HISTORY OF REFLEX HAMMER EVOLUTION</p>
 <p class="abstractid-p"><a name="PO0924">PO 0924</a></p>
 <p class="abstractid-p">BABINSKI: CHARCOTS MOST ILLUSTRIOUS PUPIL</p>
+
 <h2><a name="323e7">Líquido cefalorraquiano</a></h2>
 <p class="abstractid-p"><a name="PO0925">PO 0925</a></p>
 <p class="abstractid-p">FAMILIAL NORMAL PRESSURE HYDROCEPHALUS (NPH): A NOVEL SUBGROUP OF NPH</p>
@@ -1275,6 +1306,7 @@
 <p class="abstractid-p">DETERMINATION OF CEREBROSPINAL FLUID LACTATE REFERENCE VALUES</p>
 <p class="abstractid-p"><a name="PO0943">PO 0943</a></p>
 <p class="abstractid-p">LACTATE IS THE BEST CEREBROSPINAL FLUID (CSF) PREDICTOR OF BACTERIAL ETIOLOGY AMONG COMMUNITY MENINGITIS</p>
+
 <h2><a name="b1e07">Neuroepidemiologia</a></h2>
 <p class="abstractid-p"><a name="PO0127">PO 0127</a></p>
 <p class="abstractid-p">EPIDEMIOLOGICAL PROFILE OF MENINGITIS IN THE PEDIATRIC POPULATION OF BRAZILIAN MACROREGIONS BETWEEN 2010-2017</p>
@@ -1412,6 +1444,7 @@
 <p class="abstractid-p">NEUROPHOBIA AMONG MEDICAL STUDENTS IN BRAZIL</p>
 <p class="abstractid-p"><a name="PO1318">PO 1318</a></p>
 <p class="abstractid-p">LEVEL OF KNOWLEDGE ABOUT CEREBRAL VASCULAR ACCIDENT IN HEALTH AGENT</p>
+
 <h2><a name="b0e2c">Neurofisiologia Clínica</a></h2>
 <p class="abstractid-p"><a name="PO1319">PO 1319</a></p>
 <p class="abstractid-p">CASE REPORT: FAMILY AMYLOID POLYNEUROPATHY ACQUIRED AFTER HEPATIC TRANSPLANTATION - IMPORTANCE OF THE NEUROPHYSIOLOGICAL STUDY.</p>
@@ -1465,6 +1498,7 @@
 <p class="abstractid-p">STRANGE DYSTONIC TREMOR: THINKING OUT OF THE BOX</p>
 <p class="abstractid-p"><a name="PO1344">PO 1344</a></p>
 <p class="abstractid-p">CASE REPORT: GENERALIZED PERIODIC DISCHARGES (GPD) IN POSTERIOR REVERSIBLE ENCEPHALOPATHY SYNDROME (PRES)</p>
+
 <h2><a name="cdc5d">Neurogenética</a></h2>
 <p class="abstractid-p"><a name="PO0144">PO 0144</a></p>
 <p class="abstractid-p">NON-INVASIVE BIOMARKERS IN PATIENTS WITH ISCHEMIC STROKE: CHARACTERIZATION OF THE COHORT AND PRELIMINARY FINDINGS</p>
@@ -1606,6 +1640,7 @@
 <p class="abstractid-p">CONGENITAL MYOTONIA: TWO ILLUSTRATIVE CASES FROM SOUTH BRAZIL</p>
 <p class="abstractid-p"><a name="PO1362">PO 1362</a></p>
 <p class="abstractid-p">ADULT CEREBRAL X-LINKED ADRENOLEUKODYSTROPHY: A CASE REPORT</p>
+
 <h2><a name="02df2">Neuroimunologia</a></h2>
 <p class="abstractid-p"><a name="PO0161">PO 0161</a></p>
 <p class="abstractid-p">PSEUDOTUMOR AS A MANIFESTATION IN A PATIENT WITH RELAPSING REMITTING MULTIPLE SCLEROSIS: CASE REPORT</p>
@@ -1933,6 +1968,7 @@
 <p class="abstractid-p">ANTI-NMDAR ENCEPHALITIS ASSOCIATED WITH ROSAI-DORFMAN HISTIOCYTOSIS IN A PATIENT WITH TYPE II NEUROFIBROMATOSIS.</p>
 <p class="abstractid-p"><a name="PO1404">PO 1404</a></p>
 <p class="abstractid-p">LEBER HEREDITARY OPTIC NEUROPATHY: A CASE REPORT</p>
+
 <h2><a name="3284b">Neuroinfecção</a></h2>
 <p class="abstractid-p"><a name="PO0202">PO 0202</a></p>
 <p class="abstractid-p">CASE REPORT OF VISCERAL LEISHMANIASIS WITH NEUROLOGICAL MANIFESTATIONS: A DIAGNOSTIC APPROACH BY MOLECULAR METHODS.</p>
@@ -2208,6 +2244,7 @@
 <p class="abstractid-p">ATYPICAL EVOLUTION OF NEUROSYPHILIS: CASE REPORT.</p>
 <p class="abstractid-p"><a name="PO1438">PO 1438</a></p>
 <p class="abstractid-p">ENCEPHALITIS RELATED TO NEUROCYSTICERCOSIS: A CASE REPORT</p>
+
 <h2><a name="e130a">Neurologia Cognitiva E Do Envelhecimento</a></h2>
 <p class="abstractid-p"><a name="PO0236">PO 0236</a></p>
 <p class="abstractid-p">CASE STUDY OF A PATIENT WITH PROBABLE SECONDARY VASCULAR PROGRESSIVE APHASIA MIMICKING NON-FLUENT PRIMARY VARIANT WITH SPEECH APRAXIA</p>
@@ -2391,6 +2428,7 @@
 <p class="abstractid-p">METAMEMORY IN DIFFERENT TYPES OF COGNITIVE DISORDERS</p>
 <p class="abstractid-p"><a name="PO1462">PO 1462</a></p>
 <p class="abstractid-p">IS MINI MENTAL STATE EXAMINATION THE BEST TEST FOR LOWER EDUCATED INDIVIDUALS?</p>
+
 <h2><a name="de5f6">Neurologia Infantil</a></h2>
 <p class="abstractid-p"><a name="PO1075">PO 1075</a></p>
 <p class="abstractid-p">WESTS SYNDROME ASSOCIATED WITH HYPOMELANOSIS OF ITO: A CASE REPORT</p>
@@ -2480,6 +2518,7 @@
 <p class="abstractid-p">MIGRAINOUS HEADACHE AS CLINICAL PRESENTATION OF SUSAC‘S SYNDROME</p>
 <p class="abstractid-p"><a name="PO1484">PO 1484</a></p>
 <p class="abstractid-p">ATYPICAL PHENOTYPES IN STXBP1-RELATED ENCEPHALOPATHY</p>
+
 <h2><a name="227bd">Neurooncologia</a></h2>
 <p class="abstractid-p"><a name="PO0256">PO 0256</a></p>
 <p class="abstractid-p">ADAMANTINOMATOUS CRANIOPHARYNGIOMA DIAGNOSED IN ADULT PATIENT: CASE REPORT</p>
@@ -2563,6 +2602,7 @@
 <p class="abstractid-p">THE OCCIPITAL CONDYLE SYNDROME SECONDARY TO THE METASTATIC LOBULAR BREAST CARCINOMA IN THE CLIVUS</p>
 <p class="abstractid-p"><a name="PO0699">PO 0699</a></p>
 <p class="abstractid-p">EVALUATION OF GLIOBLASTOMA CELLS LABELED WITH TRIFUNCTIONAL NANOPARTICLES - 560/750/FE3O4 - THROUGH MRI, NIR AND BIOLUMINESCENCE TECHNIQUES.</p>
+
 <h2><a name="6c704">Neuropatias Periféricas</a></h2>
 <p class="abstractid-p"><a name="PO0276">PO 0276</a></p>
 <p class="abstractid-p">POEMS SYNDROME AS DIFFERENTIAL DIAGNOSIS OF CHRONIC INFLAMMATORY DEMYELINATING POLYRADICULONEUROPATHY (CIDP): A CASE REPORT</p>
@@ -2702,6 +2742,7 @@
 <p class="abstractid-p">THE TETHERED SPINAL CORD SYNDROME: A CASE REPORT</p>
 <p class="abstractid-p"><a name="PO1501">PO 1501</a></p>
 <p class="abstractid-p">UNCOMMON CLINICAL PRESENTATIONS IN HEREDITARY ATTR</p>
+
 <h2><a name="a0c65">Neurorreabilitação</a></h2>
 <p class="abstractid-p"><a name="PO0293">PO 0293</a></p>
 <p class="abstractid-p">DECREASED SHORT-INTERVAL INTRACORTICAL INHIBITION CORRELATES WITH BETTER PINCH STRENGTH IN PATIENTS WITH STROKE AND GOOD MOTOR RECOVERY</p>
@@ -2851,6 +2892,7 @@
 <p class="abstractid-p">VISUAL FIELD CHANGES SECONDARY TO PSEUDOTUMOR CEREBRI AND TILTED OPTIC DISC</p>
 <p class="abstractid-p"><a name="PO1519">PO 1519</a></p>
 <p class="abstractid-p">IN VITRO STUDY ON DETECTION OF HUMAN MESENCHYMAL STEM CELLS LABELED WITH MULTIMODAL MAGNETIC NANOPARTICLES WITH DOUBLE FLUORESCENCE THROUGH MOLECULAR IMAGING TECHNIQUES</p>
+
 <h2><a name="730b3">Neurossonologia</a></h2>
 <p class="abstractid-p"><a name="PO0738">PO 0738</a></p>
 <p class="abstractid-p">TRANSCRANIAL DOPPLER FINDINGS IN ANTIPHOSPHOLIPID SYNDROME</p>
@@ -2858,6 +2900,7 @@
 <p class="abstractid-p">ASSOCIATION BETWEEN TOMOGRAPHIC CHARACTERISTICS OF THE TEMPORAL BONE AND TRANSTEMPORAL WINDOW QUALITY WITH TRANSCRANIAL COLOR DOPPLER ULTRASOUND IN PATIENTS WITH STROKE OR TRANSIENT ISCHEMIC ATTACK: ANALYTICAL AND OBSERVATIONAL STUDY.</p>
 <p class="abstractid-p"><a name="PO0740">PO 0740</a></p>
 <p class="abstractid-p">EVALUATION OF SLEEP QUALITY AND SLEEPINESS LEVEL IN PATIENTS WITH HYPOTHYRODISM</p>
+
 <h2><a name="98971">Sono</a></h2>
 <p class="abstractid-p"><a name="PO0311">PO 0311</a></p>
 <p class="abstractid-p">SELF-PERCEPTION OF NOCTURNAL SYMPTOMS OF OBSTRUCTIVE SLEEP APNEA.</p>
@@ -2897,6 +2940,7 @@
 <p class="abstractid-p">STUDY OF THE IMPACT OF PAIN AND FATIGUE ON THE QUALITY OF LIFE OF PATIENTS WITH NARCOLEPSY TYPE 1 AND 2.</p>
 <p class="abstractid-p"><a name="PO0329">PO 0329</a></p>
 <p class="abstractid-p">KLEINE-LEVIN SYNDROME WITH ATYPICAL EPIDEMIOLOGY IN 29 YEAR OLD WOMAN</p>
+
 <h2><a name="52c6a">Transtornos do Movimento</a></h2>
 <p class="abstractid-p"><a name="PO0330">PO 0330</a></p>
 <p class="abstractid-p">FRAGILE X-ASSOCIATED TREMOR/ATAXIA SYNDROME AS A CAUSE OF PERIPHERAL NEUROPATHY IN AN ELDERLY PATIENT: A CASE REPORT</p>
@@ -3206,6 +3250,7 @@
 <p class="abstractid-p">SEVERE ATAXIA IN HEPATIC ENCEPHALOPATHY  AN UNUSUAL PRESENTATION OF A COMMON DISEASE: CASE REPORT</p>
 <p class="abstractid-p"><a name="PO1558">PO 1558</a></p>
 <p class="abstractid-p">STIFF-PERSON SYNDROME WITH ATYPICAL PRESENTATION: CASE REPORT</p>
+
 <h2><a name="007d4">Traumatismo cranioencefálico</a></h2>
 <p class="abstractid-p"><a name="PO0368">PO 0368</a></p>
 <p class="abstractid-p">INFLUENCE OF HYPERNATREMIA ON PROGNOSIS AND MORTALITY IN PATIENTS WITH SEVERE TRAUMATIC BRAIN INJURY</p>
