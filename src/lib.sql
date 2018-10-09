@@ -138,7 +138,7 @@ CREATE VIEW neuro.vw_relxml1 AS
 ;
 
 CREATE or replace FUNCTION neuro.sumario( p_tipo text DEFAULT 'Oral') RETURNS xml AS $f$
-  SELECT xmlelement(name section,
+  SELECT xmlelement(name div,
     xmlelement(name title, p_tipo),
     (
       SELECT xmlagg(line) cpa
@@ -232,11 +232,11 @@ CREATE or replace VIEW neuro.vw_body AS
     SELECT DISTINCT neuro.apres_tipo(modalidade) modal, temario
     FROM neuro.reltrabalhos
     ORDER BY 1,2
-  ) SELECT xmlelement(
-      name section, -- section or div
+  ) SELECT xmlagg( xmlelement(
+      name div, -- section or div
     	xmlelement(name h1, xtag_a(modal) ),
     	(
-      	SELECT xmlagg(xmlelement(name section,
+      	SELECT xmlagg(xmlelement(name div,
                   xmlelement(name h2, xtag_a_md5(t2.temario)),
                   (  -- cada resumo do tema:
                     SELECT xmlagg(resumo_full ORDER BY c.modal, c.temario, c.pub_id )
@@ -245,9 +245,9 @@ CREATE or replace VIEW neuro.vw_body AS
                   ) -- resumos
              )  ORDER BY t2.modal, t2.temario ) -- xmlagg/section h2 temario
         FROM topicos t2
-        WHERE t1.modal=t2.modal 
+        WHERE t1.modal=t2.modal
       ) -- h1-modal-recheio
-    ) -- section
+    )) -- section/agg
     AS fullbody
     FROM (SELECT DISTINCT modal FROM topicos ORDER BY 1) t1
 ;
