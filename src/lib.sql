@@ -208,7 +208,7 @@ CREATE VIEW neuro.vw_contribs AS
 
 CREATE or replace VIEW neuro.vw_xbody_resumo AS
   SELECT --xmlelement(name div, xmlattributes('bloco' as class)
-  r.pub_id, r.codigo, r.temario, neuro.apres_tipo(r.modalidade) modal,
+  neuro.apres_tipo(r.modalidade) modal, r.pub_id, r.codigo, r.temario,
   xmlconcat(
     xmlelement(name p, xmlattributes('abstractid-p' as class),
       xtag_a( r.pub_id, replace(r.pub_id,chr(160),'') )
@@ -222,7 +222,7 @@ CREATE or replace VIEW neuro.vw_xbody_resumo AS
       'Apresentação: '||array_to_string(array[TO_CHAR(r.data,'dd/mm/yyyy'),r.sala,r.hora],', '))
   ) resumo_full
   FROM neuro.relTrabalhos r INNER JOIN neuro.vw_contribs c ON c.codigo=r.codigo
-  ORDER BY pub_id
+  ORDER BY  1,2
 ;
 
 -- Para hierarquias com recursão, ver https://tapoueh.org/blog/2018/01/exporting-a-hierarchy-in-json-with-recursive-queries/
@@ -239,13 +239,13 @@ CREATE or replace VIEW neuro.vw_body AS
       	SELECT xmlagg(xmlelement(name section,
                   xmlelement(name h2, xtag_a_md5(t2.temario)),
                   (  -- cada resumo do tema:
-                    SELECT xmlagg(resumo_full)
+                    SELECT xmlagg(resumo_full ORDER BY c.modal, c.temario, c.pub_id )
                     FROM  neuro.vw_xbody_resumo c
-                    WHERE c.modal=t2.modal AND c.temario=t2.temario
-                  )
-             )) -- xmlagg/section h2 temario
+                    WHERE c.modal=t1.modal AND c.temario=t2.temario
+                  ) -- resumos
+             )  ORDER BY t2.modal, t2.temario ) -- xmlagg/section h2 temario
         FROM topicos t2
-        WHERE t1.modal=t2.modal
+        WHERE t1.modal=t2.modal 
       ) -- h1-modal-recheio
     ) -- section
     AS fullbody

@@ -1,3 +1,34 @@
+
+# Requisitos
+Conforme documento modelo de 2016.
+
+## Ordem e distribuição
+
+Conforme documento modelo de 2016. O documento precisa ser organizado nos seguintes grupos e nesta ordem:
+
+Capítulos:
+* Oral
+* Pôster
+
+Dentro de cada capítulo as respectivas seções por tema:
+
+* **Oral**: Cefaleia, Distúrbio Vestibulares e do Equilíbrio, Doença Cerebrovascular, Neurologia Intervencionista e Terapia Intensiva em Neurologia, Doenças do Neurônio Motor - Esclerose Lateral Amiotrófica, Doenças Neuromusculares, Epilepsia, Líquido cefalorraquiano, Neurofisiologia Clínica, Neurogenética, Neuroimunologia, Neuroinfecção, Neurologia Cognitiva E Do Envelhecimento, Neurologia Infantil, Neuropatias Periféricas, Neurorreabilitação, Neurossonologia, Sono, Transtornos do Movimento.
+
+* **Pôster**: Cefaleia, Distúrbio Vestibulares e do Equilíbrio, Doença Cerebrovascular, Neurologia Intervencionista e Terapia Intensiva em Neurologia, Doenças do Neurônio Motor - Esclerose Lateral Amiotrófica, Doenças Neuromusculares, Dor, Epilepsia, História da neurologia, Líquido cefalorraquiano, Neuroepidemiologia, Neurofisiologia Clínica, Neurogenética, Neuroimunologia, Neuroinfecção, Neurologia Cognitiva E Do Envelhecimento, Neurologia Infantil, Neurooncologia, Neuropatias Periféricas, Neurorreabilitação, Neurossonologia, Sono, Transtornos do Movimento, Traumatismo cranioencefálico.
+
+Dentro de cada tema os resumos na sequência correta:
+
+* Oral/Cefaleia: TL 46
+* Oral/Distúrbio Vestibulares e do Equilíbrio: TL 22,TL 34
+* ...
+* Oral/Transtornos do Movimento: TL 05,TL 06,TL 14,TL 28,TL 29,TL 30,TL 32
+* Pôster/Cefaleia: PO 0410,PO 0394,PO 0392,PO 0393,PO 0395,PO 0407,PO 0781,PO 1189, ...
+* Pôster/Distúrbio Vestibulares e do Equilíbrio: PO 0012, PO 0006, PO 0008, PO 0004, ...
+* ...
+* Pôster/Traumatismo cranioencefálico: PO 0370, PO 0373, PO 0368, PO 0374, PO 0383, PO 0380, PO 0376, PO 0389,...
+
+-----
+
 # Relatório de contagens e cosistência
 
 ## Avaliação individual dos arquivos
