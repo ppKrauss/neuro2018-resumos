@@ -178,10 +178,20 @@ CREATE or replace FUNCTION neuro.sumario( p_tipo text DEFAULT 'Oral') RETURNS xm
   )
 $f$ LANGUAGE SQL IMMUTABLE;
 
-
+CREATE or replace FUNCTION initCap_BR(p_name text) RETURNS text AS $f$
+  SELECT array_to_string(
+    array_agg(CASE
+      WHEN not_ignore AND upper(x)=x THEN x
+      WHEN upper(x) IN ('DE','DA', 'DO', 'DOS', 'DAS', 'E') THEN lower(x)
+      ELSE initcap(x)
+    END),
+    ' '
+  )
+  FROM regexp_split_to_table($1, E'[\\s\\.,;]+') t1(x), (SELECT p_name!=upper(p_name)) t2(not_ignore)
+$f$ LANGUAGE SQL IMMUTABLE;
 
 CREATE or replace FUNCTION name_for_index(p_name text) RETURNS text AS $f$
-  SELECT upper(x[array_length(x,1)])||','||chr(160)|| initcap(array_to_string(x[1:array_length(x,1)-1],' '))
+  SELECT upper(x[array_length(x,1)])||','||chr(160)|| initCap_BR(array_to_string(x[1:array_length(x,1)-1],' '))
   FROM regexp_split_to_array($1, E'\\s+') t(x);
 $f$ LANGUAGE SQL IMMUTABLE;
 
@@ -195,7 +205,7 @@ CREATE or replace FUNCTION name_for_resumo(
   p_name text,
   p_name_abrev text default NULL -- preencher apenas quando o usuário humano forneceu o dado.
 ) RETURNS text AS $f$
-  SELECT initcap(  CASE WHEN use_abbrev THEN x[1] ELSE x[array_length(x,1)] END  ) ||
+  SELECT initCap_BR(  CASE WHEN use_abbrev THEN x[1] ELSE x[array_length(x,1)] END  ) ||
          chr(160) || CASE
     WHEN use_abbrev THEN regexp_replace(array_to_string(x[2:],''),'[\.,; ]+','','g')
     ELSE CASE WHEN array_length(x,1)>1 THEN iniciais(x[1:array_length(x,1)-1]) ELSE '?' END
@@ -207,7 +217,7 @@ $f$ LANGUAGE SQL IMMUTABLE;
 
 CREATE VIEW neuro.vw_contribs AS
   SELECT codigo, array_agg(nome||'<sup>'||aff_id||'</sup>') name_list,
-         array_distinct_sort(array_agg(replace(InitCap(aff),'&','&amp;'))) aff_list
+         array_distinct_sort(array_agg(replace(initCap_BR(aff),'&','&amp;'))) aff_list
   FROM (
     SELECT DISTINCT codigo, pub_id, aff_id,
       name_for_resumo(nome_full, nome_abbrev) nome,
