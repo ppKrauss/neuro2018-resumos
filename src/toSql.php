@@ -4,9 +4,16 @@
  * Permite uso de SQL intermediário para debug. Modo de usar:
  *   cp data/*.csv /tmp
  *   php src/toSql.php | psql "postgresql://postgres:postgres@localhost:5432/trydatasets"
- *   # resultado em /tmp/neuro2018.xml
+ *   # resultado parcial em /tmp/neuro2018.xml
  */
 
+/*
+incluir diálogo e executar as tarefas:
+  php src/toSql.php | psql "postgresql://postgres:postgres@localhost:5432/trydatasets"
+  sudo cp /tmp/neuro*.* _tmp/
+  sudo chown user:user _tmp/neuro201*.*
+  cat xbase.xhtm capa body autores xfoot.xhtm > entegas/teste.htm
+*/
 // LIXO, $csvFields from datapackage fora de uso, ver array originais
 // $j =json_decode(file_get_contents('datapackage.json'), JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 // $csvFields = $j['resources'][0]['schema']['fields'];
@@ -101,23 +108,33 @@ SELECT file_put_contents(
 -- Indice dos autores:
 SELECT file_put_contents(
   '/tmp/neuro2018_idx.htm',
-  replace(xmlagg( xmlelement(name p, autor ||'...'|| array_to_string(itens,', ')) )::text, '<p', E'\n<p')
-  )
+  replace(
+    xmlagg( xmlelement(
+      name p,
+      (autor ||'...'|| array_to_string(itens,', '))::xml
+    ))::text,
+    '<p',
+    E'\n<p'
+   ) -- replace
+ ) -- file
 FROM (
   SELECT
-    name_for_index(nome_full) autor, array_agg(r.pub_id) itens
+    name_for_index(nome_full) autor,
+    array_agg( xtag_a(r.pub_id, '#'||replace(r.pub_id,chr(160),''), false)::text ) itens
   FROM neuro.relTrabalhos r,
        LATERAL jsonb_to_recordset( (neuro.metadata_bycod(r.codigo))->'contribs' ) t(nome_full text)
   GROUP BY 1
   ORDER BY 1
 ) t;
 
+
 SELECT file_put_contents(
       '/tmp/neuro2018_body.htm',
-      replace(
-         xmlelement( name div,  xmlagg(resumo_full) )::text,
-         '<p',
-         E'\n<p'
-      )
+      regexp_replace(
+         xmlelement( name div,  fullbody )::text,
+         '(<p|<section|<div|<h)',
+         E'\n\\1',
+         'g'
+      )--regexp_replace
     )
-FROM neuro.vw_corpo;
+FROM neuro.vw_body;

@@ -1,9 +1,25 @@
 
-CREATE or replace FUNCTION file_get_contents(p_file text) RETURNS text AS $f$
-   with open(args[0],"r") as content_file:
-       content = content_file.read()
-   return content
-$f$ LANGUAGE PLpythonU;  -- untrusted can read from any folder!
+-- PUBLIC LIB
+
+CREATE or replace FUNCTION xtag_a(
+  p_title text,
+  p_key text DEFAULT NULL,
+  p_is_name boolean default true
+) RETURNS xml AS $f$
+  SELECT CASE
+    WHEN p_is_name THEN xmlelement(  name a,  xmlattributes(rkey as name),  p_title  )
+    ELSE xmlelement(  name a,  xmlattributes(rkey as href),  p_title  )
+    END
+  FROM (SELECT COALESCE( p_key, lower(unaccent(   regexp_replace(p_title,'[^\w]+','_','g')   )) )) t(rkey)
+$f$ LANGUAGE SQL IMMUTABLE;
+
+CREATE or replace FUNCTION xtag_a_md5(
+  p_title text,
+  p_is_name boolean default true,
+  p_trunc int DEFAULT 5
+) RETURNS xml AS $f$
+  SELECT xtag_a(p_title , substr(md5(p_title),1,p_trunc) , p_is_name)
+$f$ LANGUAGE SQL IMMUTABLE;
 
 CREATE or replace FUNCTION array_distinct_sort (
   ANYARRAY,
@@ -22,6 +38,14 @@ CREATE or replace FUNCTION array_distinct_sort (
    )
  ) t(x)
 $f$ language SQL strict IMMUTABLE;
+
+-- FILE SYSTEM LIB:
+
+CREATE or replace FUNCTION file_get_contents(p_file text) RETURNS text AS $f$
+   with open(args[0],"r") as content_file:
+       content = content_file.read()
+   return content
+$f$ LANGUAGE PLpythonU;  -- untrusted can read from any folder!
 
 CREATE or replace FUNCTION file_put_contents(p_file text, p_content text) RETURNS text AS $f$
   # see https://stackoverflow.com/a/48485531/287948
@@ -119,8 +143,10 @@ CREATE or replace FUNCTION neuro.sumario( p_tipo text DEFAULT 'Oral') RETURNS xm
     (
       SELECT xmlagg(line) cpa
       FROM (
-       SELECT xmlelement(name p , '- Tema '||DENSE_RANK() OVER (ORDER BY temario) || ' - '||temario||' ... '|| n ||' resumos')
-       line
+       SELECT xmlelement(
+         name p ,
+         ('- Tema '||DENSE_RANK() OVER (ORDER BY temario) || ' - '||xtag_a_md5(temario,false)::text||' ... '|| n ||' resumos')::xml
+         ) line
        FROM (
          SELECT temario, count(*) n
          FROM neuro.reltrabalhos rr
@@ -139,6 +165,7 @@ CREATE or replace FUNCTION neuro.sumario( p_tipo text DEFAULT 'Oral') RETURNS xm
 $f$ LANGUAGE SQL IMMUTABLE;
 
 
+
 CREATE or replace FUNCTION name_for_index(p_name text) RETURNS text AS $f$
   SELECT upper(x[array_length(x,1)])||','||chr(160)|| initcap(array_to_string(x[1:array_length(x,1)-1],' '))
   FROM regexp_split_to_array($1, E'\\s+') t(x);
@@ -147,34 +174,21 @@ $f$ LANGUAGE SQL IMMUTABLE;
 CREATE or replace FUNCTION iniciais(p_name text[], p_sep text DEFAULT '') RETURNS text AS $f$
   SELECT array_to_string(array_agg(upper( substr(xx,1,1)  )),$2)
   FROM unnest($1) t(x), LATERAL trim(x,'. ,;') t2(xx)
-  WHERE upper(xx) NOT IN ('DE','DA', 'DOS', 'DAS');
+  WHERE upper(xx) NOT IN ('DE','DA', 'DOS', 'DAS'); -- revisar, quebra-galho
 $f$ LANGUAGE SQL IMMUTABLE;
 
 CREATE or replace FUNCTION name_for_resumo(
   p_name text,
-  p_name_abrev text default NULL
+  p_name_abrev text default NULL -- preencher apenas quando o usuário humano forneceu o dado.
 ) RETURNS text AS $f$
-  SELECT initcap(  CASE WHEN use_abbrev THEN x[1] ELSE x[array_length(x,1)] END  )||chr(160)||
-  CASE
+  SELECT initcap(  CASE WHEN use_abbrev THEN x[1] ELSE x[array_length(x,1)] END  ) ||
+         chr(160) || CASE
     WHEN use_abbrev THEN regexp_replace(array_to_string(x[2:],''),'[\.,; ]+','','g')
     ELSE CASE WHEN array_length(x,1)>1 THEN iniciais(x[1:array_length(x,1)-1]) ELSE '?' END
     END
   FROM (
-    SELECT p_name_abrev IS NOT NULL AND trim(upper(p_name_abrev))!=trim(upper($1))
+    SELECT p_name_abrev IS NOT NULL AND trim(upper(p_name_abrev))!=trim(upper($1)) -- seguro contra cópia/cola
   ) t2(use_abbrev), LATERAL regexp_split_to_array(CASE WHEN use_abbrev THEN $2 ELSE $1 END, E'[\\s+,;]') t1(x)
-$f$ LANGUAGE SQL IMMUTABLE;
-
-CREATE or replace FUNCTION name_for_resumo_BOM(
-  p_name text,
-  p_name_abrev text default NULL
-) RETURNS text AS $f$
-  SELECT initcap(  CASE WHEN ck THEN x[1] ELSE x[array_length(x,1)] END  )||chr(160)|| CASE
-    WHEN ck THEN regexp_replace(array_to_string(x[2:],''),'[\.,; ]+','','g')
-    ELSE iniciais(x[1:array_length(x,1)-1])
-    END
-  FROM (
-    SELECT p_name_abrev IS NOT NULL AND trim(upper(p_name_abrev))!=trim(upper($1))
-  ) t2(ck), LATERAL regexp_split_to_array(CASE WHEN ck THEN $2 ELSE $1 END, E'[\\s+,;]') t1(x)
 $f$ LANGUAGE SQL IMMUTABLE;
 
 CREATE VIEW neuro.vw_contribs AS
@@ -192,11 +206,12 @@ CREATE VIEW neuro.vw_contribs AS
   ORDER BY 1
 ;
 
-CREATE or replace VIEW neuro.vw_corpo AS
+CREATE or replace VIEW neuro.vw_xbody_resumo AS
   SELECT --xmlelement(name div, xmlattributes('bloco' as class)
+  r.pub_id, r.codigo, r.temario, neuro.apres_tipo(r.modalidade) modal,
   xmlconcat(
     xmlelement(name p, xmlattributes('abstractid-p' as class),
-      xmlelement(name a, xmlattributes(replace(r.pub_id,chr(160),'') as name),r.pub_id)
+      xtag_a( r.pub_id, replace(r.pub_id,chr(160),'') )
     ),
     xmlelement(name p, xmlattributes('abstractid-p' as class), r.titulo),
     xmlelement(name p, xmlattributes('contrib-group' as class), array_to_string(c.name_list,'; ')::xml),
@@ -207,4 +222,32 @@ CREATE or replace VIEW neuro.vw_corpo AS
       'Apresentação: '||array_to_string(array[TO_CHAR(r.data,'dd/mm/yyyy'),r.sala,r.hora],', '))
   ) resumo_full
   FROM neuro.relTrabalhos r INNER JOIN neuro.vw_contribs c ON c.codigo=r.codigo
+  ORDER BY pub_id
+;
+
+-- Para hierarquias com recursão, ver https://tapoueh.org/blog/2018/01/exporting-a-hierarchy-in-json-with-recursive-queries/
+
+CREATE or replace VIEW neuro.vw_body AS
+  WITH topicos AS (
+    SELECT DISTINCT neuro.apres_tipo(modalidade) modal, temario
+    FROM neuro.reltrabalhos
+    ORDER BY 1,2
+  ) SELECT xmlelement(
+      name section, -- section or div
+    	xmlelement(name h1, xtag_a(modal) ),
+    	(
+      	SELECT xmlagg(xmlelement(name section,
+                  xmlelement(name h2, xtag_a_md5(t2.temario)),
+                  (  -- cada resumo do tema:
+                    SELECT xmlagg(resumo_full)
+                    FROM  neuro.vw_xbody_resumo c
+                    WHERE c.modal=t2.modal AND c.temario=t2.temario
+                  )
+             )) -- xmlagg/section h2 temario
+        FROM topicos t2
+        WHERE t1.modal=t2.modal
+      ) -- h1-modal-recheio
+    ) -- section
+    AS fullbody
+    FROM (SELECT DISTINCT modal FROM topicos ORDER BY 1) t1
 ;
