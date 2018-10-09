@@ -91,7 +91,8 @@ FROM (
 ) t group by 1;
 -->
 
-## Avaliação da primeira etapa, XML
+## Avaliação dos testes
+O XML acabou não sendo usado exceto para converir UTF8 na primeira prova. Com o `teste.htm` já ficaram evidentes alguns problemas e decisões:
 
 * Problemas com UTF8 no resumo não serão corrigidos, vieram dos originais. Pode-se tentar filtrar simbolos estranhos substituindo por espaço.
 
@@ -108,11 +109,13 @@ codigo | aff_id |nome_suspeito
 74264 |      3 | Hospital de Clínicas da Universidade Federal do Paraná                                                                                    |
 74387 |      6 | Molecular Medicine Branch, Eunice Kennedy Shriver National Institute of Child Health and Human Development, National Institutes of Health |
 74537 |      6 | Center of Neurology and Neurosurgery Associates (NeuroCENNA). BP u0096 A Beneficência Portuguesa                                         |
-75213 |      4 | The Brazilian Institute of Neuroscience and Neurotechnology u0096 BRAINN, Campinas, SP, Brazil                                           |
+75213 |      4 | The Brazilian Institute of Neuroscience and Neurotechnology u0096 BRAINN, Campinas, SP, Brazil |
 
-## Etapa final, layout HTML
+O arquivo *teste_dump* foi gerado por `grep -P "<h|abstractid" /tmp/neuro2018_body.htm > teste_dump.txt` para comprovação da ordem dos tópicos e dos resumos.
 
-A intenção do autor na estruturação do resumo foi determinada estatisticamente:
+### Solicitação extra
+
+Tentou-se resgatar a intenção do autor na estruturação do resumo, permitindo ao layout final, através de escolha de estilos apropriados, dar algum destaque nos tópicos de resumos estruturados. A real demanda, assim como as palavras-tópico, foram determinadas estatisticamente:
 
 Precisa bold?         |  n  | Precisa bold?  | n
 --------------------------|-----|------------|------
@@ -141,4 +144,11 @@ from neuro.reltrabalhos group by 1 order by 2 desc, 1;
 ```
 Como medida paleativa uma expressão regular baseada nas palavras mais frequentes e pontuação foi gerada, e `<span class="destaque">`  incluso para o operador do layout dar o devido tratamento.
 
-....
+## Entrega final e demais versões
+
+As versões encontram-se em [releases](https://github.com/ppKrauss/neuro2018-resumos/releases), a partir da 1.0.0 temos a versão entregue de produção. O essencial da entrega são os arquivos
+`neuro2018_*.htm` da pasta  [entregas](entregas), reunidos em `neuro2018_pacoteHtml.zip`.
+
+O software SQL não foi revisado ou otimizado, fica como legado e curiosidade para as discussões abertas sobre editoração XML e gestão de workflow com SQL.
+
+
