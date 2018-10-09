@@ -4,20 +4,9 @@
  * Permite uso de SQL intermediário para debug. Modo de usar:
  *   cp data/*.csv /tmp
  *   php src/toSql.php | psql "postgresql://postgres:postgres@localhost:5432/trydatasets"
- *   # resultado parcial em /tmp/neuro2018.xml
+ * Ver resultado parcial em /tmp/neuro2018.xml ou geral em /tml/neuro*.htm
+ * Ver sh make.sh para reconstrução dos HTMLs.
  */
-
-/*
-incluir diálogo e executar as tarefas:
-  php src/toSql.php | psql "postgresql://postgres:postgres@localhost:5432/trydatasets"
-  sudo cp /tmp/neuro*.* _tmp/
-  sudo chown user:user _tmp/neuro201*.*
-  cat xbase.xhtm capa body autores xfoot.xhtm > entegas/teste.htm
-*/
-// LIXO, $csvFields from datapackage fora de uso, ver array originais
-// $j =json_decode(file_get_contents('datapackage.json'), JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
-// $csvFields = $j['resources'][0]['schema']['fields'];
-// print 'DEBUG:'.json_encode($csvFields, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 
 $SCH = 'neuro';
 
@@ -72,6 +61,15 @@ EOT;
 	$sql2 .=  "\nINSERT INTO $SCH.$k SELECT ".join(',',$map)." FROM tmpcsv_$k;\n\n";
 }
 
+
+////
+// TRECHO FORA DE USO, $csvFields from datapackage fora de uso, ver array originais
+//  $j =json_decode(file_get_contents('datapackage.json'), JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+//  $csvFields = $j['resources'][0]['schema']['fields'];
+//  print 'DEBUG:'.json_encode($csvFields, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+////
+
+// Abaixo output com SQL que pode ser usado como script intermediário para debugs.
 ?>
 
 -- cp data/*.csv /tmp

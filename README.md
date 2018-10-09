@@ -4,7 +4,7 @@ Metadados e conteúdos originais do tratamento realizado sobre a planilha de res
 
 Repositório para troca de dados na equipe editorial e comprovação de entregas. Contém:
 
-* [Dados](dados) com "matéria prima" para a 
+* [Dados](data) com "matéria prima" para a realização do processamento dos resumos. Todas as planilhas foram analisadas, mas apenas `original-relTrabalhos.csv` foi de fato utilizada. 
 * [fontes (src)](src) de algoritmos utilizados na geração do produto final (PDF, XML, EPUB ou HTML). 
 * [Entregas](entregas) com material processado entregue. 
 * [Relatório](relatorio.md) com indicações mais detalhadas dos requisitos e testes.
